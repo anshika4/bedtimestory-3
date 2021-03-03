@@ -42,14 +42,13 @@ else{ alert('enter email and password');
 render(){
 return(
 <KeyboardAvoidingView style={{alignItems:'center',marginTop:20}}>
-<View style={styles.container}>
 <View>
 <Text style={styles.textTiitle}>Bedtime Stories</Text>
 <Image style={styles.Image} source={require('../assets/cc.jpg')}/>
 </View>    
 <View>
 <TextInput style={styles.loginBox}
-placeholder='emailId(pragunparu@gmail.com)'
+placeholder='enter emailId'
 keyboardType='email-address'
 onChangeText={(text)=>{
 this.setState({
@@ -57,7 +56,7 @@ emailId:text
 })    
 }}/> 
 <TextInput style={styles.loginBox}
-placeholder='password(123456)'
+placeholder='enter password'
 secureTextEntry={true}
 onChangeText={(text)=>{
 this.setState({
@@ -71,7 +70,6 @@ onPress={()=>{
 this.login(this.state.emailId,this.state.password);
 }}><Text style={styles.text}>Login</Text>
 </TouchableOpacity>    
-</View>
 </View>
 </KeyboardAvoidingView>
 )
@@ -104,10 +102,6 @@ color:'#ffff',
 fontWeight:'200', 
 fontSize:20 
 },
-container:{ 
-flex:1, 
-backgroundColor:'#F8BE85' 
-}, 
 button:{ 
 width:100, 
 height:40, 
